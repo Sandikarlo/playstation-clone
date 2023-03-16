@@ -1,0 +1,15 @@
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.dropdown-container {
+  box-sizing: border-box;
+  display: flex;
+  list-style: none;
+  justify-content: center;
+}
+
+.dropdown-container a img {
+  height: 10%;
+}
