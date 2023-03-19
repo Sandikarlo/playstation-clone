@@ -21,12 +21,13 @@
 
 <script>
 // add Function that toggles display. Can be added to all dropdowns (https://stackoverflow.com/questions/8454079/toggle-displaynone-style-with-javascript)
+
   function toggledisplay(elementId) {
-    let x = document.getElementById(elementId);
-    if (x.style.display === "block") {
-      x.style.display = "none";
+    let dropdown = document.getElementById(elementId);
+    if (dropdown.style.display === "block") {
+      dropdown.style.display = "none";
     } else {
-      x.style.display = "block";
+      dropdown.style.display = "block";
     }
   }
 
@@ -42,29 +43,29 @@
     <li class="navbar-dropdown-img"><a href="#"><img class="navbar-img" src="images/favicon.png" alt="Sony link"></a></li>
     <li class="navbar-dropdown">
       <div class="dropdown">
-        <button class="dropbtn" type="button" onclick="toggledisplay('dropdown-1')">Games</button>
+        <button id="dropbtn1" type="button" onclick="toggledisplay('dropdown-1')">Games</button>
         <ul id="dropdown-1" class="dropdown-content">
-          <div class="dropdown-container">
-            <li>
+          <div class="drop-container">
+            <div>
                 <a><img src="images/ps-icon-1.png" alt="icon"></a>
-                <p>PS5</p>
-            </li>
-            <li>
+                <p>PS 5</p>
+            </div>
+            <div>
               <a><img src="images/ps-icon-2.png" alt="icon"></a>
-              <p>PS4</p>
-            </li>
-            <li>
+              <p>PS 5</p>
+            </div>
+            <div>
               <a><img src="images/ps-icon-3.png" alt="icon"></a>
-              <p>PS VR2</p>
-            </li>
-            <li>
+              <p>PS 5</p>
+            </div>
+            <div>
               <a><img src="images/ps-icon-4.png" alt="icon"></a>
-              <p>PS Plus</p>
-            </li>
-            <li>
+              <p>PS 5</p>
+            </div>
+            <div>
               <a><img src="images/ps-icon-5.png" alt="icon"></a>
-              <p>Buy Games</p>
-            </li>
+              <p>PS 5</p>
+            </div>
           </div>
 
           <hr>
