@@ -18,32 +18,20 @@
     <div class="sony-bar">
       <a class="sony-logo">Sony</a>
     </div>
-
 <script>
-// add Function that toggles display. Can be added to all dropdowns (https://stackoverflow.com/questions/8454079/toggle-displaynone-style-with-javascript)
-
-  function toggledisplay(elementId) {
-    let dropdown = document.getElementById(elementId);
-    if (dropdown.style.display === "block") {
-      dropdown.style.display = "none";
-    } else {
-      dropdown.style.display = "block";
-    }
-  }
 
 </script>
-
-
+<!-- &#10094; <= unicode for left-pointing angle quotetion mark -->
   </head>
   <body>
 
 <!-- Navbar -->
 <div class="navbar-container">
   <ul class="navbar-ul">
-    <li class="navbar-dropdown-img"><a href="#"><img class="navbar-img" src="images/favicon.png" alt="Sony link"></a></li>
+    <li class="navbar-dropdown-icon"><a href="#"><img class="navbar-img" src="images/favicon.png" alt="Sony link"></a></li>
     <li class="navbar-dropdown">
       <div class="dropdown">
-        <button id="dropbtn1" type="button" onclick="toggledisplay('dropdown-1')">Games</button>
+        <button id="dropbtn1" class="navbtn" type="button" onclick="toggledisplay('dropdown-1')">Games</button>
         <ul id="dropdown-1" class="dropdown-content">
           <div class="drop-container">
             <div>
@@ -82,9 +70,10 @@
       </div>
     </li>
 
+<!-- Add All the first dropdown attributes to all others -->
     <li class="navbar-dropdown">
       <div class="dropdown">
-        <button class="dropbtn" type="button" onclick="toggledisplay('dropdown-2')">Hardware</button>
+        <button class="navbtn" type="button" onclick="toggledisplay('dropdown-2')">Hardware</button>
         <div id="dropdown-2" class="dropdown-content">
           <a href="#">Link 4</a>
           <a href="#">Link 5</a>
@@ -95,7 +84,7 @@
 
     <li class="navbar-dropdown">
       <div class="dropdown">
-        <button class="dropbtn" type="button" onclick="toggledisplay('dropdown-3')">Services</button>
+        <button class="navbtn" type="button" onclick="toggledisplay('dropdown-3')">Services</button>
         <div id="dropdown-3" class="dropdown-content">
           <a href="#">Link 7</a>
           <a href="#">Link 8</a>
@@ -106,7 +95,7 @@
 
     <li class="navbar-dropdown">
       <div class="dropdown">
-        <button class="dropbtn" type="button" onclick="toggledisplay('dropdown-4')">News</button>
+        <button class="navbtn" type="button" onclick="toggledisplay('dropdown-4')">News</button>
         <div id="dropdown-4" class="dropdown-content">
           <a href="#">Link 4</a>
           <a href="#">Link 5</a>
@@ -117,7 +106,7 @@
 
     <li class="navbar-dropdown">
       <div class="dropdown">
-        <button class="dropbtn" type="button" onclick="toggledisplay('dropdown-5')">Shop</button>
+        <button class="navbtn" type="button" onclick="toggledisplay('dropdown-5')">Shop</button>
         <div id="dropdown-5" class="dropdown-content">
           <a href="#">Link 4</a>
           <a href="#">Link 5</a>
@@ -128,7 +117,7 @@
 
     <li class="navbar-dropdown">
       <div class="dropdown">
-        <button class="dropbtn" type="button" onclick="toggledisplay('dropdown-6')">Support</button>
+        <button class="navbtn" type="button" onclick="toggledisplay('dropdown-6')">Support</button>
         <div id="dropdown-6" class="dropdown-content">
           <a href="#">Link 4</a>
           <a href="#">Link 5</a>
@@ -145,10 +134,27 @@
   </ul>
 </div>
 
-<!-- Body Image -->
-<img class="test-img" src="images/destiny_2_lightfall.jpg" alt="image">
+<!-- Slideshow -->
+
+<div class="slideshow-container">
+
+  <div class="mySlides fade">
+    <img src="images/destiny_2_lightfall.jpg">
+  </div>
+
+  <div class="mySlides fade">
+    <img src="images/hogwarts_legacy.jpeg">
+  </div>
+
+  <div class="mySlides fade">
+    <img src="images/gta_5.jpeg">
+  </div>
+
+</div>
 
 
+<script src="index.js" type="text/javascript">
 
+</script>
   </body>
 </html>
