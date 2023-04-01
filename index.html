@@ -1,62 +1,66 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>PlayStation</title>
-    <link rel="icon" type="image/x-icon" href="images/favicon.png">
 
-    <!-- Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Bree+Serif&display=swap" rel="stylesheet">
-    <!-- Google Icons -->
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
-    <!-- Custom Stylesheet -->
-    <link rel="stylesheet" href="css/styles.css">
-    <!-- Sony Bar -->
-    <div class="sony-bar">
-      <a class="sony-logo">Sony</a>
-    </div>
-<script>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>PlayStation</title>
+  <link rel="icon" type="image/x-icon" href="images/favicon.png">
 
-</script>
-<!-- &#10094; <= unicode for left-pointing angle quotetion mark -->
-  </head>
-  <body>
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bree+Serif&display=swap" rel="stylesheet">
+  <!-- Google Icons -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+  <!-- Custom Stylesheet -->
+  <link rel="stylesheet" href="css/styles.css">
+  <!-- Sony Bar -->
+  <div class="sony-bar">
+    <a class="sony-logo">Sony</a>
+  </div>
+  <script>
 
-<!-- Navbar -->
-<div class="navbar-container">
-  <ul class="navbar-ul">
-    <li class="navbar-dropdown-icon"><a href="#"><img class="navbar-img" src="images/favicon.png" alt="Sony link"></a></li>
-    <li class="navbar-dropdown">
-      <div class="dropdown">
-        <button id="dropbtn1" class="navbtn" type="button" onclick="toggledisplay('dropdown-1')">Games</button>
-        <ul id="dropdown-1" class="dropdown-content">
-          <div class="drop-container">
-            <div>
+  </script>
+  <!-- &#10094; <= unicode for left-pointing angle quotetion mark -->
+</head>
+
+<body onload="showSlides();">
+
+
+<!-- Need to add a fixed navbar on scroll!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! -->
+  <!-- Navbar -->
+  <div class="navbar-container">
+    <ul class="navbar-ul">
+      <li class="navbar-dropdown-icon"><a href="#"><img class="navbar-img" src="images/favicon.png" alt="Sony link"></a></li>
+      <li class="navbar-dropdown">
+        <div class="dropdown">
+          <button id="dropbtn1" class="navbtn" type="button" onclick="toggledisplay('dropdown-1')">Games</button>
+          <ul id="dropdown-1" class="dropdown-content">
+            <div class="drop-container">
+              <div>
                 <a><img src="images/ps-icon-1.png" alt="icon"></a>
                 <p>PS 5</p>
+              </div>
+              <div>
+                <a><img src="images/ps-icon-2.png" alt="icon"></a>
+                <p>PS 5</p>
+              </div>
+              <div>
+                <a><img src="images/ps-icon-3.png" alt="icon"></a>
+                <p>PS 5</p>
+              </div>
+              <div>
+                <a><img src="images/ps-icon-4.png" alt="icon"></a>
+                <p>PS 5</p>
+              </div>
+              <div>
+                <a><img src="images/ps-icon-5.png" alt="icon"></a>
+                <p>PS 5</p>
+              </div>
             </div>
-            <div>
-              <a><img src="images/ps-icon-2.png" alt="icon"></a>
-              <p>PS 5</p>
-            </div>
-            <div>
-              <a><img src="images/ps-icon-3.png" alt="icon"></a>
-              <p>PS 5</p>
-            </div>
-            <div>
-              <a><img src="images/ps-icon-4.png" alt="icon"></a>
-              <p>PS 5</p>
-            </div>
-            <div>
-              <a><img src="images/ps-icon-5.png" alt="icon"></a>
-              <p>PS 5</p>
-            </div>
-          </div>
 
-          <hr>
+            <hr>
             <div class="drop-games">
               <li>Playstation Indies</li>
               <li>PS4 games on PS5</li>
@@ -65,96 +69,204 @@
               <li>Deals & offers</li>
             </div>
 
-        </ul>
+          </ul>
 
-      </div>
-    </li>
-
-<!-- Add All the first dropdown attributes to all others -->
-    <li class="navbar-dropdown">
-      <div class="dropdown">
-        <button class="navbtn" type="button" onclick="toggledisplay('dropdown-2')">Hardware</button>
-        <div id="dropdown-2" class="dropdown-content">
-          <a href="#">Link 4</a>
-          <a href="#">Link 5</a>
-          <a href="#">Link 6</a>
         </div>
-      </div>
-    </li>
+      </li>
 
-    <li class="navbar-dropdown">
-      <div class="dropdown">
-        <button class="navbtn" type="button" onclick="toggledisplay('dropdown-3')">Services</button>
-        <div id="dropdown-3" class="dropdown-content">
-          <a href="#">Link 7</a>
-          <a href="#">Link 8</a>
-          <a href="#">Link 9</a>
+      <!-- Add All the first dropdown attributes to all others -->
+      <li class="navbar-dropdown">
+        <div class="dropdown">
+          <button class="navbtn" type="button" onclick="toggledisplay('dropdown-2')">Hardware</button>
+          <div id="dropdown-2" class="dropdown-content">
+            <a href="#">Link 4</a>
+            <a href="#">Link 5</a>
+            <a href="#">Link 6</a>
+          </div>
         </div>
-      </div>
-    </li>
+      </li>
 
-    <li class="navbar-dropdown">
-      <div class="dropdown">
-        <button class="navbtn" type="button" onclick="toggledisplay('dropdown-4')">News</button>
-        <div id="dropdown-4" class="dropdown-content">
-          <a href="#">Link 4</a>
-          <a href="#">Link 5</a>
-          <a href="#">Link 6</a>
+      <li class="navbar-dropdown">
+        <div class="dropdown">
+          <button class="navbtn" type="button" onclick="toggledisplay('dropdown-3')">Services</button>
+          <div id="dropdown-3" class="dropdown-content">
+            <a href="#">Link 7</a>
+            <a href="#">Link 8</a>
+            <a href="#">Link 9</a>
+          </div>
         </div>
-      </div>
-    </li>
+      </li>
 
-    <li class="navbar-dropdown">
-      <div class="dropdown">
-        <button class="navbtn" type="button" onclick="toggledisplay('dropdown-5')">Shop</button>
-        <div id="dropdown-5" class="dropdown-content">
-          <a href="#">Link 4</a>
-          <a href="#">Link 5</a>
-          <a href="#">Link 6</a>
+      <li class="navbar-dropdown">
+        <div class="dropdown">
+          <button class="navbtn" type="button" onclick="toggledisplay('dropdown-4')">News</button>
+          <div id="dropdown-4" class="dropdown-content">
+            <a href="#">Link 4</a>
+            <a href="#">Link 5</a>
+            <a href="#">Link 6</a>
+          </div>
         </div>
-      </div>
-    </li>
+      </li>
 
-    <li class="navbar-dropdown">
-      <div class="dropdown">
-        <button class="navbtn" type="button" onclick="toggledisplay('dropdown-6')">Support</button>
-        <div id="dropdown-6" class="dropdown-content">
-          <a href="#">Link 4</a>
-          <a href="#">Link 5</a>
-          <a href="#">Link 6</a>
+      <li class="navbar-dropdown">
+        <div class="dropdown">
+          <button class="navbtn" type="button" onclick="toggledisplay('dropdown-5')">Shop</button>
+          <div id="dropdown-5" class="dropdown-content">
+            <a href="#">Link 4</a>
+            <a href="#">Link 5</a>
+            <a href="#">Link 6</a>
+          </div>
         </div>
-      </div>
-    </li>
+      </li>
 
-    <li class="navbar-dropdown"><button class="sign-in-btn" type="button" name="button">Sign In</button></li>
-    <form class="" action="/" method="POST">
-      <li class="navbar-dropdown"><input class="search-input" type="text" name="search" placeholder="Search"></li>
-    </form>
+      <li class="navbar-dropdown">
+        <div class="dropdown">
+          <button class="navbtn" type="button" onclick="toggledisplay('dropdown-6')">Support</button>
+          <div id="dropdown-6" class="dropdown-content">
+            <a href="#">Link 4</a>
+            <a href="#">Link 5</a>
+            <a href="#">Link 6</a>
+          </div>
+        </div>
+      </li>
 
-  </ul>
-</div>
+      <li class="navbar-dropdown"><button class="sign-in-btn" type="button" name="button">Sign In</button></li>
+      <form class="" action="/" method="POST">
+        <li class="navbar-dropdown"><input class="search-input" type="text" name="search" placeholder="Search"></li>
+      </form>
 
-<!-- Slideshow -->
-
-<div class="slideshow-container">
-
-  <div class="mySlides fade">
-    <img src="images/destiny_2_lightfall.jpg">
+    </ul>
   </div>
 
-  <div class="mySlides fade">
-    <img src="images/hogwarts_legacy.jpeg">
+  <!-- Slideshow -->
+
+  <div class="slideshow-container">
+
+    <div class="mySlides fade">
+      <img src="images/destiny_2_lightfall.jpg">
+    </div>
+
+    <div class="mySlides fade">
+      <img src="images/hogwarts_legacy.jpeg">
+    </div>
+
+    <div class="mySlides fade">
+      <img src="images/gta_5.jpeg">
+    </div>
+
+    <div class="slideshow-indicator">
+      <img class="indicator-img" src="images/destiny_2_lightfall.jpg" onclick="clickedDiv(0)" onmouseover="hoveredDiv(0)" onmouseout="dehoveredDiv()">
+      <img class="indicator-img" src="images/hogwarts_legacy.jpeg" onclick="clickedDiv(1)" onmouseover="hoveredDiv(1)" onmouseout="dehoveredDiv()">
+      <img class="indicator-img" src="images/gta_5.jpeg" onclick="clickedDiv(2)" onmouseover="hoveredDiv(2)" onmouseout="dehoveredDiv()">
+      <img class="indicator-img" src="images/fifa_23.jpg" onclick="clickedDiv(3)" onmouseover="hoveredDiv(3)" onmouseout="dehoveredDiv()">
+    </div>
   </div>
 
-  <div class="mySlides fade">
-    <img src="images/gta_5.jpeg">
+  <!-- Carousel of products -->
+  <div class="carousel-container">
+    <div class="title-box">
+      <h3>PlayStation 5 Console</h3>
+      <p>Experience an all-new generation of incredible PlayStation games.</p>
+      <button class="btn carousel-btn" type="button" name="learn-more">Learn more</button>
+      <button class="btn carousel-btn" type="button" name="buy-now">Buy now</button>
+    </div>
+    <div class="img-box">
+      <img class="carousel-img" src="images/playstation_5.jpg" alt="playstation 5 image">
+    </div>
   </div>
 
-</div>
+  <div class="carousel-container">
+    <div class="title-box">
+      <h3>PlayStation 5 Console</h3>
+      <p>Experience an all-new generation of incredible PlayStation games.</p>
+      <button class="btn carousel-btn" type="button" name="learn-more">Learn more</button>
+      <button class="btn carousel-btn" type="button" name="buy-now">Buy now</button>
+    </div>
+    <div class="img-box">
+      <img class="carousel-img" src="images/dualsense_controller.jpg" alt="playstation 5 image">
+    </div>
+  </div>
+
+  <div class="carousel-container">
+    <div class="title-box">
+      <h3>PlayStation 5 Console</h3>
+      <p>Experience an all-new generation of incredible PlayStation games.</p>
+      <button class="btn carousel-btn" type="button" name="learn-more">Learn more</button>
+      <button class="btn carousel-btn" type="button" name="buy-now">Buy now</button>
+    </div>
+    <div class="img-box">
+      <img class="carousel-img" src="images/pulse_headset.jpg" alt="playstation 5 image">
+    </div>
+  </div>
+
+  <div class="carousel-container">
+    <div class="title-box">
+      <h3>PlayStation 5 Console</h3>
+      <p>Experience an all-new generation of incredible PlayStation games.</p>
+      <button class="btn carousel-btn" type="button" name="learn-more">Learn more</button>
+      <button class="btn carousel-btn" type="button" name="buy-now">Buy now</button>
+    </div>
+    <div class="img-box">
+      <img class="carousel-img" src="images/dualsense_edge.jpg" alt="playstation 5 image">
+    </div>
+  </div>
+
+  <div class="carousel-container">
+    <div class="title-box">
+      <h3>PlayStation 5 Console</h3>
+      <p>Experience an all-new generation of incredible PlayStation games.</p>
+      <button class="btn carousel-btn" type="button" name="learn-more">Learn more</button>
+      <button class="btn carousel-btn" type="button" name="buy-now">Buy now</button>
+    </div>
+    <div class="img-box">
+      <img class="carousel-img" src="images/media_remote.jpeg" alt="playstation 5 image">
+    </div>
+  </div>
+
+  <div class="carousel-container">
+    <div class="title-box">
+      <h3>PlayStation 5 Console</h3>
+      <p>Experience an all-new generation of incredible PlayStation games.</p>
+      <button class="btn carousel-btn" type="button" name="learn-more">Learn more</button>
+      <button class="btn carousel-btn" type="button" name="buy-now">Buy now</button>
+    </div>
+    <div class="img-box">
+      <img class="carousel-img" src="images/hd_camera.jpg" alt="playstation 5 image">
+    </div>
+  </div>
+
+  <div class="carousel-container">
+    <div class="title-box">
+      <h3>PlayStation 5 Console</h3>
+      <p>Experience an all-new generation of incredible PlayStation games.</p>
+      <button class="btn carousel-btn" type="button" name="learn-more">Learn more</button>
+      <button class="btn carousel-btn" type="button" name="buy-now">Buy now</button>
+    </div>
+    <div class="img-box">
+      <img class="carousel-img" src="images/console_covers.jpg" alt="playstation 5 image">
+    </div>
+  </div>
+
+<!-- Carousel Indicators -->
+  <div class="carousel-indicator">
+    <div><img src="images/playstation_5.jpg"><p>PS5 Console</p></div>
+    <div><img src="images/dualsense_controller.jpg"><p>PS5 Console</p></div>
+    <div><img src="images/pulse_headset.jpg"><p>PS5 Console</p></div>
+    <div><img src="images/dualsense_edge.jpg"><p>PS5 Console</p></div>
+    <div><img src="images/media_remote.jpeg"><p>PS5 Console</p></div>
+    <div><img src="images/hd_camera.jpg"><p>PS5 Console</p></div>
+    <div><img src="images/console_covers.jpg"><p>PS5 Console</p></div>
+  </div>
+
+  <h1>
+hallo
+</h1>
 
 
-<script src="index.js" type="text/javascript">
 
-</script>
-  </body>
+  <script src="index.js" type="text/javascript">
+
+  </script>
+</body>
+
 </html>

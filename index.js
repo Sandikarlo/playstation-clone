@@ -16,18 +16,69 @@
 
 // Function for Slideshow image change
   let slideIndex = 0;
-  showSlides();
 
-  function showSlides() {
+  function showSlides(selected) {
     let i;
     let slides = document.getElementsByClassName("mySlides");
+    let indicators = document.getElementsByClassName("indicator-img");
     for (i = 0; i < slides.length; i++) {
     slides[i].style.display = "none";
+    indicators[i].classList.remove("is-selected");
     }
     slideIndex++;
+
     if (slideIndex > slides.length) {slideIndex = 1}
+    if (slideIndex < 1) {slideIndex = slides.length}
     slides[slideIndex-1].style.display = "block";
-    setTimeout(showSlides, 10000);
+    indicators[slideIndex-1].classList.add("is-selected");
+
+// set interval function timing breaking on indicator click
+    // setInterval(showSlides, 10000);
   }
 
-  // console.log(document.getElementsByClassName("mySlides"));
+  function clickedDiv(n) {
+    showSlides(slideIndex = n);
+  }
+
+// Need to add opacity change transition effect!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+  function hoveredDiv(num) {
+    let indicators = document.getElementsByClassName("indicator-img");
+
+    for (let i = 0; i < indicators.length; i++) {
+      indicators[i].style.opacity = "0.5";
+    }
+
+    switch (num) {
+      case 0:
+        indicators[0].style.opacity = "1";
+        break;
+      case 1:
+        indicators[1].style.opacity = "1";
+        break;
+      case 2:
+        indicators[2].style.opacity = "1";
+        break;
+    }
+  }
+
+  function dehoveredDiv() {
+    let indicators = document.getElementsByClassName("indicator-img");
+
+    for (let i = 0; i < indicators.length; i++) {
+      indicators[i].style.opacity = "0.7";
+
+      if (indicators[0].classList.contains("is-selected")) {
+        indicators[0].style.opacity = "1";
+      }
+      if (indicators[1].classList.contains("is-selected")) {
+        indicators[1].style.opacity = "1";
+      }
+      if (indicators[2].classList.contains("is-selected")) {
+        indicators[2].style.opacity = "1";
+      }
+    }
+
+    // console.log(selected);
+  }
+
+  
