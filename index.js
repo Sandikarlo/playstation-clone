@@ -1,3 +1,16 @@
+// Function for sticky Navbar
+document.addEventListener("scroll", function () {
+  if (window.pageYOffset < 40) {
+    document.getElementById("navbar-container").classList.remove("container-fixed");
+    // docuemnt.getElementById("placeholder").style.display = "none";
+  }
+  if (window.pageYOffset > 40) {
+    document.getElementById("navbar-container").classList.add("container-fixed");
+    // docuemnt.getElementById("placeholder").style.display = "block";
+  }
+})
+
+
 //Function for navbar dropdown
   function toggledisplay(elementId) {
     let dropdown = document.getElementById(elementId);
@@ -80,5 +93,31 @@
 
     // console.log(selected);
   }
+let carouselIndex = 0;
+  function carouselShuffle(num) {
+    let slides = document.getElementsByClassName("carousel-container");
+    let indicators = document.getElementById("carousel-indicator").children;
+    // let images = document.getElementsByClassName("carousel-img");
 
-  
+    for (let i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";
+      indicators[i].classList.remove("is-selected");
+      // images[i].style.opacity = "0.5";
+    }
+    carouselIndex ++;
+    if (carouselIndex > slides.length) {carouselIndex = 1}
+    if (carouselIndex < 1) {carouselIndex = slides.lenght}
+    slides[carouselIndex - 1].style.display = "grid";
+    // slides[carouselIndex - 1].style.opacity = "1";
+    indicators[carouselIndex - 1].classList.add("is-selected");
+    // images[carouselIndex - 1].style.opacity = "1";
+  }
+
+  function fadeIn(num) {
+    let indicators = document.getElementById("carousel-indicator").children;
+    indicators[num].style.opacity = "1";
+  }
+
+function clickedCarousel(num) {
+  carouselShuffle(carouselIndex = num);
+}

@@ -25,12 +25,13 @@
   <!-- &#10094; <= unicode for left-pointing angle quotetion mark -->
 </head>
 
-<body onload="showSlides();">
+<body onload="showSlides(); carouselShuffle();">
 
 
 <!-- Need to add a fixed navbar on scroll!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! -->
+  <!-- <div id="placeholder"></div> -->
   <!-- Navbar -->
-  <div class="navbar-container">
+  <div id="navbar-container">
     <ul class="navbar-ul">
       <li class="navbar-dropdown-icon"><a href="#"><img class="navbar-img" src="images/favicon.png" alt="Sony link"></a></li>
       <li class="navbar-dropdown">
@@ -154,6 +155,10 @@
       <img src="images/gta_5.jpeg">
     </div>
 
+    <div class="mySlides fade">
+      <img src="images/fifa_23.jpg">
+    </div>
+
     <div class="slideshow-indicator">
       <img class="indicator-img" src="images/destiny_2_lightfall.jpg" onclick="clickedDiv(0)" onmouseover="hoveredDiv(0)" onmouseout="dehoveredDiv()">
       <img class="indicator-img" src="images/hogwarts_legacy.jpeg" onclick="clickedDiv(1)" onmouseover="hoveredDiv(1)" onmouseout="dehoveredDiv()">
@@ -177,8 +182,8 @@
 
   <div class="carousel-container">
     <div class="title-box">
-      <h3>PlayStation 5 Console</h3>
-      <p>Experience an all-new generation of incredible PlayStation games.</p>
+      <h3>DualSense™ Wireless Controller</h3>
+      <p>Immerse yourself in the gaming experience with a controller the supports responsive haptic feedback and dynamic trigger effects.</p>
       <button class="btn carousel-btn" type="button" name="learn-more">Learn more</button>
       <button class="btn carousel-btn" type="button" name="buy-now">Buy now</button>
     </div>
@@ -189,8 +194,8 @@
 
   <div class="carousel-container">
     <div class="title-box">
-      <h3>PlayStation 5 Console</h3>
-      <p>Experience an all-new generation of incredible PlayStation games.</p>
+      <h3>PULSE 3D™ Wireless Headset</h3>
+      <p>Enjoy a seamless wireless experience with a headset fine-tuned for 3D Audio on PS5 consoles.</p>
       <button class="btn carousel-btn" type="button" name="learn-more">Learn more</button>
       <button class="btn carousel-btn" type="button" name="buy-now">Buy now</button>
     </div>
@@ -201,8 +206,8 @@
 
   <div class="carousel-container">
     <div class="title-box">
-      <h3>PlayStation 5 Console</h3>
-      <p>Experience an all-new generation of incredible PlayStation games.</p>
+      <h3>DualSense Edge™ Wireless Controller</h3>
+      <p>Get an edge in gameplay with remappable buttons, tuneable triggers and sticks, changeable stick caps, back buttons, and more.</p>
       <button class="btn carousel-btn" type="button" name="learn-more">Learn more</button>
       <button class="btn carousel-btn" type="button" name="buy-now">Buy now</button>
     </div>
@@ -213,8 +218,8 @@
 
   <div class="carousel-container">
     <div class="title-box">
-      <h3>PlayStation 5 Console</h3>
-      <p>Experience an all-new generation of incredible PlayStation games.</p>
+      <h3>Media Remote</h3>
+      <p>Conveniently control movies, streaming services and more on your PS5 console with an intuitive layout.</p>
       <button class="btn carousel-btn" type="button" name="learn-more">Learn more</button>
       <button class="btn carousel-btn" type="button" name="buy-now">Buy now</button>
     </div>
@@ -225,8 +230,8 @@
 
   <div class="carousel-container">
     <div class="title-box">
-      <h3>PlayStation 5 Console</h3>
-      <p>Experience an all-new generation of incredible PlayStation games.</p>
+      <h3>HD Camera</h3>
+      <p>Add yourself to your gameplay videos and broadcasts with smooth, sharp, full-HD capture.</p>
       <button class="btn carousel-btn" type="button" name="learn-more">Learn more</button>
       <button class="btn carousel-btn" type="button" name="buy-now">Buy now</button>
     </div>
@@ -237,8 +242,8 @@
 
   <div class="carousel-container">
     <div class="title-box">
-      <h3>PlayStation 5 Console</h3>
-      <p>Experience an all-new generation of incredible PlayStation games.</p>
+      <h3>PS5 Console Covers</h3>
+      <p>Personalise your PlayStation 5 or PlayStation 5 Digital Edition console with a vibrant array of new colour options.</p>
       <button class="btn carousel-btn" type="button" name="learn-more">Learn more</button>
       <button class="btn carousel-btn" type="button" name="buy-now">Buy now</button>
     </div>
@@ -248,19 +253,35 @@
   </div>
 
 <!-- Carousel Indicators -->
-  <div class="carousel-indicator">
-    <div><img src="images/playstation_5.jpg"><p>PS5 Console</p></div>
-    <div><img src="images/dualsense_controller.jpg"><p>PS5 Console</p></div>
-    <div><img src="images/pulse_headset.jpg"><p>PS5 Console</p></div>
-    <div><img src="images/dualsense_edge.jpg"><p>PS5 Console</p></div>
-    <div><img src="images/media_remote.jpeg"><p>PS5 Console</p></div>
-    <div><img src="images/hd_camera.jpg"><p>PS5 Console</p></div>
-    <div><img src="images/console_covers.jpg"><p>PS5 Console</p></div>
+  <div id="carousel-indicator">
+    <div onclick="clickedCarousel(0)"><img src="images/playstation_5.jpg"><p>PS5 Console</p></div>
+    <div onclick="clickedCarousel(1)"><img src="images/dualsense_controller.jpg"><p>PS5 Console</p></div>
+    <div onclick="clickedCarousel(2)"><img src="images/pulse_headset.jpg"><p>PS5 Console</p></div>
+    <div onclick="clickedCarousel(3)"><img src="images/dualsense_edge.jpg"><p>PS5 Console</p></div>
+    <div onclick="clickedCarousel(4)"><img src="images/media_remote.jpeg"><p>PS5 Console</p></div>
+    <div onclick="clickedCarousel(5)"><img src="images/hd_camera.jpg"><p>PS5 Console</p></div>
+    <div onclick="clickedCarousel(6)"><img src="images/console_covers.jpg"><p>PS5 Console</p></div>
   </div>
 
-  <h1>
-hallo
-</h1>
+<section class="plus-section">
+  <div class="plus-images">
+    <img id="meet-your-maker-img" src="images\meet_your_maker.jpg">
+    <img id="sackboy-img" src="images\sackboy.jpg">
+    <img id="tails-of-iron-img" src="images\tails_of_iron.jpg">
+  </div>
+  <div class="plus-info">
+    <img src="images/playstation_plus_icon1.png">
+    <h1>PlayStation Plus</h1>
+    <p>Enhance your PlayStation experience with access to online multiplayer, monthly games, exclusive discounts and more.</p>
+    <button class="btn" type="button" name="explore-plus">Explore PlayStation Plus</button>
+  </div>
+</section>
+
+<h1>Hallo!</h1>
+<h1>Hallo!</h1>
+<h1>Hallo!</h1>
+<h1>Hallo!</h1>
+
 
 
 
