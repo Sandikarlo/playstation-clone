@@ -7,11 +7,13 @@
       dropdown.style.height = "0rem";
       dropdown.style.opacity = "0";
       setTimeout(()=> dropdown.style.display = "none", 500);
+      dropdown.style.transition = "all 1s";
 
     } else { //If are hidden
       dropdown.style.height = "11rem";
       dropdown.style.opacity = "1";
       dropdown.style.display = "block";
+      dropdown.style.transition = "all 1s"
     }
   }
 

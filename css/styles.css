@@ -81,6 +81,8 @@ form {
   z-index: 2;
   position: sticky;
   top: 0;
+  display: flex;
+  align-items: center;
 }
 
 .navbar-ul {
@@ -118,7 +120,6 @@ form {
 }
 
 #dropdown-1 {
-  transition: all 1s;
   height: 0;
   opacity: 0;
   display: none;
@@ -545,7 +546,7 @@ button[name="buy-now"] {
 #nextBtn {
   right: 16rem;
 }
-.container {
+#social-media .container {
   width: 100%;
   height: 24vw;
   background-color: #f5f7fa;
@@ -556,22 +557,119 @@ button[name="buy-now"] {
   justify-content: center;
   grid-row-gap: 4rem;
 }
-.container .title {
+#social-media .container .title {
   grid-column: 1 / 2;
   text-align: center;
 }
-.container .title h1 {
+#social-media .container .title h1 {
   font-size: 2rem;
   font-weight: 80;
   margin: 0;
 }
-.container .items {
+#social-media .container .items {
   display: flex;
   grid-column: 1 / 2;
   justify-content: center;
   gap: 3rem;
 }
-.container img {
+#social-media .container img {
   height: 6vw;
   opacity: 0.8;
+}
+#legal .container {
+  max-width: 100%;
+  height: 37rem;
+  background-color: #00439C;
+  padding: 1vw 5vw 0 5vw;
+}
+#legal .container * {
+  color: white;
+}
+#legal .container hr {
+  border: 0;
+  border-bottom: 1px solid white;
+  opacity: 0.3;
+}
+#legal .title .logo {
+  max-width: 4vw;
+  margin-right: 1vw;
+}
+#legal .title .text {
+  filter: brightness(0) invert(1);
+  max-width: 13vw;
+}
+#legal .link-container {
+  display: grid;
+  grid-template-columns: repeat(6, auto);
+  grid-template-rows: 15vw;
+}
+#legal .link-container .categories li:first-child {
+  font-weight: bolder;
+}
+#legal .link-container li {
+  font-weight: 300;
+  list-style: none;
+  font-size: 0.9rem;
+  line-height: 1.7rem;
+  cursor: pointer;
+}
+#legal .link-container li:hover:not(:first-child) {
+  color: #ababab
+}
+#legal .link-container img {
+  width: 1.5vw;
+  filter: invert(1);
+  padding-right: 1vw;
+}
+#legal .link-container img:hover {
+  opacity: 0.7;
+}
+#legal .interactive .sony-interactive {
+  width: 20vw;
+  height: 7vw;
+  vertical-align: bottom;
+  display: flex;
+  align-items: center;
+}
+#legal .interactive h3 {
+  display: inline;
+  word-spacing: 100vw;
+  margin: 0;
+  font-weight: normal;
+  margin-left: 1vw;
+}
+#legal .interactive img {
+  float: left;
+  width: 6vw;
+}
+#legal .interactive p {
+  font-weight: 350;
+  font-size: 0.9rem;
+}
+#legal .interactive a {
+  text-decoration: underline;
+}
+#legal .interactive a:hover {
+  color: #ababab;
+}
+#legal .policy {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.9rem;
+}
+#legal .policy .country {
+  display: flex;
+  align-items: center;
+  gap: 1vw;
+}
+#legal .policy img {
+  width: 1.5vw;
+  filter: invert(1);
+}
+#legal .policy p:hover {
+  color: #ababab;
+  cursor: pointer;
+}
+#legal .policy .utility {
+  display: flex;
 }
