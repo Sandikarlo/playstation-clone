@@ -25,11 +25,9 @@
   <!-- &#10094; <= unicode for left-pointing angle quotetion mark -->
 </head>
 
-<body onload="showSlides(); carouselShuffle();">
+<body onload="showSlides(); carouselShuffle(); carouselLoad();">
 
 
-<!-- Need to add a fixed navbar on scroll!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! -->
-  <!-- <div id="placeholder"></div> -->
   <!-- Navbar -->
   <div id="navbar-container">
     <ul class="navbar-ul">
@@ -71,7 +69,6 @@
             </div>
 
           </ul>
-
         </div>
       </li>
 
@@ -263,6 +260,7 @@
     <div onclick="clickedCarousel(6)"><img src="images/console_covers.jpg"><p>PS5 Console</p></div>
   </div>
 
+<!-- Playstation Plus -->
 <section class="plus-section">
   <div class="plus-images">
     <img id="meet-your-maker-img" src="images\meet_your_maker.jpg">
@@ -277,13 +275,254 @@
   </div>
 </section>
 
-<h1>Hallo!</h1>
-<h1>Hallo!</h1>
-<h1>Hallo!</h1>
-<h1>Hallo!</h1>
+<!-- Game-Grid Carousel -->
+<section id="game-grid">
+<div class="game-grid_container">
+  <div class="game-grid_slide">
+
+    <div class="game-grid_box" id="lastClone">
+      <div class="game-grid_box-grid">
+        <div class="game-grid_title">
+          <h2>Comming soon</h2><br>
+          <h3>Amazing new experiences are just around the corner</h3>
+        </div>
+        <div class="game-grid_item">
+          <img src="images\spider_man.jpg">
+          <h3>Marvel's Spider-Man 2</h3>
+        </div>
+        <div class="game-grid_item">
+          <img src="images\assasins_creed.jpg">
+          <h3>Assassin's Creed® Mirage</h3>
+        </div>
+        <div class="game-grid_item">
+          <img src="images\street_fighter.jpg">
+          <h3>Street Fighter 6</h3>
+        </div>
+        <div class="game-grid_item">
+          <img src="images\diablo.jpg">
+          <h3>Diablo IV</h3>
+        </div>
+        <div class="game-grid_item">
+          <img src="images\skull_and_bones.jpg">
+          <h3>Skull and Bones</h3>
+        </div>
+        <div class="game-grid_item">
+          <img src="images\silent_hill.jpg">
+          <h3>Silent Hill 2</h3>
+        </div>
+        <div class="game-grid_item">
+          <img src="images\exoprimal.jpg">
+          <h3>Exoprimal</h3>
+        </div>
+        <div class="game-grid_item">
+          <img src="images\stellar_blade.jpg">
+          <h3>Stellar Blade™</h3>
+        </div>
+        <div class="game-grid_item">
+          <img src="images\little_devil_inside.jpg">
+          <h3>Little Devil Inside</h3>
+        </div>
+        <div class="game-grid_item">
+          <img src="images\firewall_ultra.jpg">
+          <h3>Firewall™ Ultra</h3>
+        </div>
+        <div class="game-grid_item">
+          <img src="images\suicide_squad.jpg">
+          <h3>Suicide Squad: Kill the Justice League</h3>
+        </div>
+        <div class="game-grid_item">
+          <img src="images\final_fantasy.jpg">
+          <h3>Final Fantasy XVI</h3>
+        </div>
+
+      </div>
+    </div>
+
+    <div class="game-grid_box" id="first">
+      <div class="game-grid_box-grid">
+        <div class="game-grid_title">
+          <h2>New releases</h2><br>
+          <h3>Great PS5 and PS4 games available now</h3>
+        </div>
+        <div class="game-grid_item">
+          <img src="images\hogwarts_legacy.jpeg">
+          <h3>Hogwarts Legacy</h3>
+        </div>
+        <div class="game-grid_item">
+          <img src="images\wild_hearths.jpg">
+          <h3>Wild Hearths™</h3>
+        </div>
+        <div class="game-grid_item">
+          <img src="images\resident_evil.jpg">
+          <h3>Resident Evil 4</h3>
+        </div>
+        <div class="game-grid_item">
+          <img src="images\ea_fifa_23.jpg">
+          <h3>EA SPORTS™ FIFA 23 </h3>
+        </div>
+        <div class="game-grid_item">
+          <img src="images\horizon_forbidden_west.jpg">
+          <h3>Horizon Forbidden</h3>
+        </div>
+        <div class="game-grid_item">
+          <img src="images\elder_ring.jpg">
+          <h3>Elden Ring</h3>
+        </div>
+        <div class="game-grid_item">
+          <img src="images\ragnarok.jpg">
+          <h3>God of War Ragnarök</h3>
+        </div>
+        <div class="game-grid_item">
+          <img src="images\last_of_us.jpg">
+          <h3>The Last of Us™ Part I</h3>
+        </div>
+        <div class="game-grid_item">
+          <img src="images\call_of_duty.jpg">
+          <h3>Call of Duty®: Modern Warfare® II</h3>
+        </div>
+        <div class="game-grid_item">
+          <img src="images\overwatch.jpg">
+          <h3>Overwatch 2</h3>
+        </div>
+        <div class="game-grid_item">
+          <img src="images\star_wars.jpg">
+          <h3>STAR WARS Jedi: Survivor™</h3>
+        </div>
+        <div class="game-grid_item">
+          <img src="images\gran_turismo.jpg">
+          <h3>Gran Turismo® 7</h3>
+        </div>
+      </div>
+    </div>
+
+    <div class="game-grid_box" id="last">
+      <div class="game-grid_box-grid">
+        <div class="game-grid_title">
+          <h2>Comming soon</h2><br>
+          <h3>Amazing new experiences are just around the corner</h3>
+        </div>
+        <div class="game-grid_item">
+          <img src="images\spider_man.jpg">
+          <h3>Marvel's Spider-Man 2</h3>
+        </div>
+        <div class="game-grid_item">
+          <img src="images\assasins_creed.jpg">
+          <h3>Assassin's Creed® Mirage</h3>
+        </div>
+        <div class="game-grid_item">
+          <img src="images\street_fighter.jpg">
+          <h3>Street Fighter 6</h3>
+        </div>
+        <div class="game-grid_item">
+          <img src="images\diablo.jpg">
+          <h3>Diablo IV</h3>
+        </div>
+        <div class="game-grid_item">
+          <img src="images\skull_and_bones.jpg">
+          <h3>Skull and Bones</h3>
+        </div>
+        <div class="game-grid_item">
+          <img src="images\silent_hill.jpg">
+          <h3>Silent Hill 2</h3>
+        </div>
+        <div class="game-grid_item">
+          <img src="images\exoprimal.jpg">
+          <h3>Exoprimal</h3>
+        </div>
+        <div class="game-grid_item">
+          <img src="images\stellar_blade.jpg">
+          <h3>Stellar Blade™</h3>
+        </div>
+        <div class="game-grid_item">
+          <img src="images\little_devil_inside.jpg">
+          <h3>Little Devil Inside</h3>
+        </div>
+        <div class="game-grid_item">
+          <img src="images\firewall_ultra.jpg">
+          <h3>Firewall™ Ultra</h3>
+        </div>
+        <div class="game-grid_item">
+          <img src="images\suicide_squad.jpg">
+          <h3>Suicide Squad: Kill the Justice League</h3>
+        </div>
+        <div class="game-grid_item">
+          <img src="images\final_fantasy.jpg">
+          <h3>Final Fantasy XVI</h3>
+        </div>
+
+      </div>
+    </div>
+
+    <div class="game-grid_box" id="firstClone">
+        <div class="game-grid_box-grid">
+          <div class="game-grid_title">
+            <h2>New releases</h2><br>
+            <h3>Great PS5 and PS4 games available now</h3>
+          </div>
+          <div class="game-grid_item">
+            <img src="images\hogwarts_legacy.jpeg">
+            <h3>Hogwarts Legacy</h3>
+          </div>
+          <div class="game-grid_item">
+            <img src="images\wild_hearths.jpg">
+            <h3>Wild Hearths™</h3>
+          </div>
+          <div class="game-grid_item">
+            <img src="images\resident_evil.jpg">
+            <h3>Resident Evil 4</h3>
+          </div>
+          <div class="game-grid_item">
+            <img src="images\ea_fifa_23.jpg">
+            <h3>EA SPORTS™ FIFA 23 </h3>
+          </div>
+          <div class="game-grid_item">
+            <img src="images\horizon_forbidden_west.jpg">
+            <h3>Horizon Forbidden</h3>
+          </div>
+          <div class="game-grid_item">
+            <img src="images\elder_ring.jpg">
+            <h3>Elden Ring</h3>
+          </div>
+          <div class="game-grid_item">
+            <img src="images\ragnarok.jpg">
+            <h3>God of War Ragnarök</h3>
+          </div>
+          <div class="game-grid_item">
+            <img src="images\last_of_us.jpg">
+            <h3>The Last of Us™ Part I</h3>
+          </div>
+          <div class="game-grid_item">
+            <img src="images\call_of_duty.jpg">
+            <h3>Call of Duty®: Modern Warfare® II</h3>
+          </div>
+          <div class="game-grid_item">
+            <img src="images\overwatch.jpg">
+            <h3>Overwatch 2</h3>
+          </div>
+          <div class="game-grid_item">
+            <img src="images\star_wars.jpg">
+            <h3>STAR WARS Jedi: Survivor™</h3>
+          </div>
+          <div class="game-grid_item">
+            <img src="images\gran_turismo.jpg">
+            <h3>Gran Turismo® 7</h3>
+          </div>
+        </div>
+  </div>
+
+</div>
+<button id="prevBtn"><a><</a></button>
+<button id="nextBtn"><a>></a></button>
+</section>
 
 
 
+
+
+<h1>Hallo!</h1>
+<h1>Hallo!</h1>
+<h1>Hallo!</h1>
+<h1>Hallo!</h1>
 
   <script src="index.js" type="text/javascript">
 

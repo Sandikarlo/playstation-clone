@@ -1,0 +1,51 @@
+*{
+  padding: 0;
+  box-sizing: border-box;
+}
+.carousel-container {
+  width: 50vw;
+  height: 400px;
+  background-color: grey;
+  margin: auto;
+  outline: solid 5px black;
+  overflow: hidden;
+  position: relative;
+}
+.carousel-slide {
+  display: flex;
+  position: absolute;
+}
+.carousel-box {
+  width: 50vw;
+  height: 400px;
+}
+.box-grid {
+  display: grid;
+  justify-content: center;
+  justify-items: center;
+  grid-template-columns: repeat(3, 200px);
+  grid-row-gap: 20px;
+}
+.item {
+  width: 150px;
+  height: 100px;
+  background-color: black;
+}
+.item img {
+  max-width: 100%;
+}
+.red {
+  background-color: red;
+}
+.blue {
+  background-color: blue;
+}
+.green {
+  background-color: green;
+}
+.purple {
+  background-color: purple;
+}
+.yellow {
+  background-color: yellow;
+}

@@ -1,29 +1,17 @@
-// Function for sticky Navbar
-document.addEventListener("scroll", function () {
-  if (window.pageYOffset < 40) {
-    document.getElementById("navbar-container").classList.remove("container-fixed");
-    // docuemnt.getElementById("placeholder").style.display = "none";
-  }
-  if (window.pageYOffset > 40) {
-    document.getElementById("navbar-container").classList.add("container-fixed");
-    // docuemnt.getElementById("placeholder").style.display = "block";
-  }
-})
-
-
 //Function for navbar dropdown
   function toggledisplay(elementId) {
     let dropdown = document.getElementById(elementId);
-    // let items = document.getElementById(elementId).querySelectorAll("*");
 
+// Fix Transition Effect So that it works both ways!!!!!!!!!!!!!!!!!!!!!!!!!!!!
     if (dropdown.style.height === "11rem") { //If elements are shown
       dropdown.style.height = "0rem";
       dropdown.style.opacity = "0";
+      setTimeout(()=> dropdown.style.display = "none", 500);
 
     } else { //If are hidden
       dropdown.style.height = "11rem";
       dropdown.style.opacity = "1";
-      // items.classList.add("dropdown-1-show");
+      dropdown.style.display = "block";
     }
   }
 
@@ -34,6 +22,7 @@ document.addEventListener("scroll", function () {
     let i;
     let slides = document.getElementsByClassName("mySlides");
     let indicators = document.getElementsByClassName("indicator-img");
+    // Hide all slides
     for (i = 0; i < slides.length; i++) {
     slides[i].style.display = "none";
     indicators[i].classList.remove("is-selected");
@@ -45,8 +34,8 @@ document.addEventListener("scroll", function () {
     slides[slideIndex-1].style.display = "block";
     indicators[slideIndex-1].classList.add("is-selected");
 
-// set interval function timing breaking on indicator click
-    // setInterval(showSlides, 10000);
+// set interval function timing breaking on indicator click!!!!!!!!!!!!!!!!!!!!!!!!!!
+    // setInterval(showSlides, 2000);
   }
 
   function clickedDiv(n) {
@@ -121,3 +110,82 @@ let carouselIndex = 0;
 function clickedCarousel(num) {
   carouselShuffle(carouselIndex = num);
 }
+
+// Function for Game Grid
+const carouselSlide = document.querySelector(".game-grid_slide");
+const carouselImages = document.querySelectorAll(".game-grid_slide .game-grid_box");
+
+
+// Buttons
+const prevBtn = document.querySelector("#prevBtn");
+const nextBtn = document.querySelector("#nextBtn");
+
+// counter
+let counter = 1;
+const size = carouselImages[1].clientWidth;
+
+carouselSlide.style.transform = "translateX(" + (-size * counter ) + "px)";
+// Slide Highlighting function
+
+function carouselLoad() {
+  for (let i=0; i < carouselImages.length; i++) {
+    carouselImages[i].style.opacity = "0.5";
+  }
+  carouselImages[1].style.opacity = 1;
+}
+
+// Button Listeners
+nextBtn.addEventListener("click", () => {
+// Last Box loads weirdly!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+  if (counter >= carouselImages.length - 1) return;
+  carouselSlide.style.transition = "transform 0.5s cubic-bezier(.15,.5,0,1)";
+  counter++;
+  carouselSlide.style.transform = "translateX(" + (-size * counter ) + "px)";
+
+for (let i=0; i < carouselImages.length; i++) {
+  carouselImages[i].style.opacity = "0.5";
+}
+  if (carouselImages[counter].id === "last") {
+      carouselImages[2].style.opacity = 1;
+  }
+  if (carouselImages[counter - 2].id === "first") {
+    carouselImages[3].style.opacity = 1;
+    carouselSlide.addEventListener("transitionend", ()=> {
+      carouselImages[1].style.opacity = 1;
+    });
+  }
+});
+
+prevBtn.addEventListener("click", () => {
+  if (counter <= 0) return;
+  carouselSlide.style.transition = "transform 0.5s cubic-bezier(.15,.5,0,1)";
+  counter--;
+  carouselSlide.style.transform = "translateX(" + (-size * counter ) + "px)";
+  console.log(counter);
+
+for (let i=0; i < carouselImages.length; i++) {
+    carouselImages[i].style.opacity = "0.5";
+}
+  if (carouselImages[counter].id === "first") {
+    carouselImages[1].style.opacity = 1;
+  }
+  if (carouselImages[counter].id === "lastClone") {
+    carouselImages[0].style.opacity = 1;
+    setTimeout(()=> {
+      carouselImages[2].style.opacity = 1;
+    }, 100)
+  }
+});
+
+carouselSlide.addEventListener("transitionend", () => {
+  if (carouselImages[counter].id === "lastClone") {
+    carouselSlide.style.transition = "none";
+    counter = carouselImages.length - 2;
+    carouselSlide.style.transform = "translateX(" + (-size * counter )  + "px)";
+  }
+  if (carouselImages[counter].id === "firstClone") {
+    carouselSlide.style.transition = "none";
+    counter = carouselImages.length - counter;
+    carouselSlide.style.transform = "translateX(" + (-size * counter ) + "px)";
+  }
+});
