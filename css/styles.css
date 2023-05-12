@@ -4,8 +4,10 @@
 
 body {
   margin: 0;
-  overflow: auto;
+  overflow: hidden;
   z-index: -10;
+  font-family: 'Montserrat', sans-serif;
+
 }
 
 a {
@@ -16,7 +18,6 @@ a {
 p {
   margin: 0;
   padding: 0;
-  font-family: 'Montserrat', sans-serif;
 }
 
 form {
@@ -1052,5 +1053,14 @@ button[name="buy-now"] {
 
   .dropdown {
     height: 11rem;
+  }
+}
+@media screen and (max-width: 1380px) {
+  .search {
+    left: 83vw;
+  }
+
+  .sign-in-btn {
+    left: 75vw;
   }
 }
