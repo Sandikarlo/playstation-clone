@@ -1,21 +1,45 @@
 //Function for navbar dropdown
-  function toggledisplay(elementId) {
-    let dropdown = document.getElementById(elementId);
+const body = document.querySelector("body");
+const dropdown = document.querySelectorAll(".dropdown");
+const arrow = document.querySelectorAll(".nav-links img");
+const links = document.querySelectorAll(".nav-links li");
+const logo = document.querySelector(".logo");
+const search = document.querySelector(".search");
+const searchBox = document.querySelector(".search-box");
 
-// Fix Transition Effect So that it works both ways!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-    if (dropdown.style.height === "11rem") { //If elements are shown
-      dropdown.style.height = "0rem";
-      dropdown.style.opacity = "0";
-      setTimeout(()=> dropdown.style.display = "none", 500);
-      dropdown.style.transition = "all 1s";
-
-    } else { //If are hidden
-      dropdown.style.height = "11rem";
-      dropdown.style.opacity = "1";
-      dropdown.style.display = "block";
-      dropdown.style.transition = "all 1s"
+function dropit (linkIndex) {
+  if (! (dropdown[linkIndex].classList.contains("dropdown-active"))) {
+    for (let i = 0; i<dropdown.length; i++) {
+      dropdown[i].classList.remove("dropdown-active");
+      arrow[i].classList.remove("arrow-active");
     }
+    dropdown[linkIndex].classList.add("dropdown-active");
+    links.forEach(link => link.classList.add("nav-links-active"));
+    logo.classList.add("logo-active");
+    search.classList.add("search-active");
+    arrow[linkIndex].classList.toggle("arrow-active");
   }
+  else {
+    dropdown[linkIndex].classList.remove("dropdown-active");
+    links.forEach(link => link.classList.remove("nav-links-active"));
+    logo.classList.remove("logo-active");
+    search.classList.remove("search-active");
+    arrow[linkIndex].classList.toggle("arrow-active");
+  }
+}
+search.addEventListener('click', (ev)=> {
+  searchBox.style.display = "flex";
+  ev.stopPropagation();
+});
+body.addEventListener('click', ()=> {
+  searchBox.style.display = "none";
+  body.style.opacity = 1;
+});
+searchBox.addEventListener('click', (ev)=> {
+  searchBox.style.display = "flex";
+  ev.stopPropagation();
+});
+
 
 // Function for Slideshow image change
   let slideIndex = 0;
@@ -35,21 +59,25 @@
     if (slideIndex < 1) {slideIndex = slides.length}
     slides[slideIndex-1].style.display = "block";
     indicators[slideIndex-1].classList.add("is-selected");
-
-// set interval function timing breaking on indicator click!!!!!!!!!!!!!!!!!!!!!!!!!!
-    // setInterval(showSlides, 2000);
   }
 
+// Automatically change Slide
+let slideInterval = setInterval(showSlides, 600000);
+
+// Change slide on Indicator Click
   function clickedDiv(n) {
+    clearInterval(slideInterval);
     showSlides(slideIndex = n);
+    // slideInterval = setInterval(showSlides, 6000);
   }
 
-// Need to add opacity change transition effect!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+// SlideShow indicator Function
   function hoveredDiv(num) {
     let indicators = document.getElementsByClassName("indicator-img");
 
     for (let i = 0; i < indicators.length; i++) {
       indicators[i].style.opacity = "0.5";
+      indicators[i].style.transition = "all 0.15s";
     }
 
     switch (num) {
@@ -88,20 +116,19 @@ let carouselIndex = 0;
   function carouselShuffle(num) {
     let slides = document.getElementsByClassName("carousel-container");
     let indicators = document.getElementById("carousel-indicator").children;
-    // let images = document.getElementsByClassName("carousel-img");
+    let images = document.getElementsByClassName("carousel-img");
 
     for (let i = 0; i < slides.length; i++) {
       slides[i].style.display = "none";
       indicators[i].classList.remove("is-selected");
-      // images[i].style.opacity = "0.5";
+      images[i].classList.remove("carousel-img-active");
     }
     carouselIndex ++;
     if (carouselIndex > slides.length) {carouselIndex = 1}
     if (carouselIndex < 1) {carouselIndex = slides.lenght}
     slides[carouselIndex - 1].style.display = "grid";
-    // slides[carouselIndex - 1].style.opacity = "1";
     indicators[carouselIndex - 1].classList.add("is-selected");
-    // images[carouselIndex - 1].style.opacity = "1";
+    images[carouselIndex - 1].classList.add("carousel-img-active")
   }
 
   function fadeIn(num) {
@@ -138,7 +165,7 @@ function carouselLoad() {
 
 // Button Listeners
 nextBtn.addEventListener("click", () => {
-// Last Box loads weirdly!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+// Last Box loads weirdly!!!
   if (counter >= carouselImages.length - 1) return;
   carouselSlide.style.transition = "transform 0.5s cubic-bezier(.15,.5,0,1)";
   counter++;

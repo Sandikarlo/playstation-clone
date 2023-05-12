@@ -13,153 +13,268 @@
   <link href="https://fonts.googleapis.com/css2?family=Bree+Serif&display=swap" rel="stylesheet">
   <!-- Google Icons -->
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+  <!-- FontAwesome link -->
+  <script src="https://kit.fontawesome.com/bfb0470a78.js" crossorigin="anonymous"></script>
   <!-- Custom Stylesheet -->
   <link rel="stylesheet" href="css/styles.css">
   <!-- Sony Bar -->
   <div class="sony-bar">
-    <a class="sony-logo">Sony</a>
+    <a class="sony-logo">
+      <img src="images\sony_logo.png" alt="">
+    </a>
   </div>
   <script>
 
   </script>
-  <!-- &#10094; <= unicode for left-pointing angle quotetion mark -->
+
 </head>
 
 <body onload="showSlides(); carouselShuffle(); carouselLoad();">
 
-
   <!-- Navbar -->
-  <div id="navbar-container">
-    <ul class="navbar-ul">
-      <li class="navbar-dropdown-icon"><a href="#"><img class="navbar-img" src="images/favicon.png" alt="Sony link"></a></li>
-      <li class="navbar-dropdown">
-        <div class="dropdown">
-          <button id="dropbtn1" class="navbtn" type="button" onclick="toggledisplay('dropdown-1')">Games</button>
-          <ul id="dropdown-1" class="dropdown-content">
-            <div class="drop-container">
-              <div>
-                <a><img src="images/ps-icon-1.png" alt="icon"></a>
-                <p>PS 5</p>
-              </div>
-              <div>
-                <a><img src="images/ps-icon-2.png" alt="icon"></a>
-                <p>PS 5</p>
-              </div>
-              <div>
-                <a><img src="images/ps-icon-3.png" alt="icon"></a>
-                <p>PS 5</p>
-              </div>
-              <div>
-                <a><img src="images/ps-icon-4.png" alt="icon"></a>
-                <p>PS 5</p>
-              </div>
-              <div>
-                <a><img src="images/ps-icon-5.png" alt="icon"></a>
-                <p>PS 5</p>
-              </div>
-            </div>
-
-            <hr>
-            <div class="drop-games">
-              <li>Playstation Indies</li>
-              <li>PS4 games on PS5</li>
-              <li>Free to Play</li>
-              <li>PlayStation games on PC</li>
-              <li>Deals & offers</li>
-            </div>
-
-          </ul>
-        </div>
+  <nav class="">
+    <div class="logo">
+      <img src="images\favicon.png" alt="">
+    </div>
+    <ul class="nav-links">
+      <li onclick="dropit(0)";>
+        <a href="#">Games </a>
+        <img src="images/arrow.svg" alt="">
       </li>
-
-      <!-- Add All the first dropdown attributes to all others -->
-      <li class="navbar-dropdown">
-        <div class="dropdown">
-          <button class="navbtn" type="button" onclick="toggledisplay('dropdown-2')">Hardware</button>
-          <div id="dropdown-2" class="dropdown-content">
-            <a href="#">Link 4</a>
-            <a href="#">Link 5</a>
-            <a href="#">Link 6</a>
-          </div>
-        </div>
+      <li onclick="dropit(1)";>
+        <a href="#">Hardware </a>
+        <img src="images/arrow.svg" alt="">
       </li>
-
-      <li class="navbar-dropdown">
-        <div class="dropdown">
-          <button class="navbtn" type="button" onclick="toggledisplay('dropdown-3')">Services</button>
-          <div id="dropdown-3" class="dropdown-content">
-            <a href="#">Link 7</a>
-            <a href="#">Link 8</a>
-            <a href="#">Link 9</a>
-          </div>
-        </div>
+      <li onclick="dropit(2)";>
+        <a href="#">Services </a>
+        <img src="images/arrow.svg" alt="">
       </li>
-
-      <li class="navbar-dropdown">
-        <div class="dropdown">
-          <button class="navbtn" type="button" onclick="toggledisplay('dropdown-4')">News</button>
-          <div id="dropdown-4" class="dropdown-content">
-            <a href="#">Link 4</a>
-            <a href="#">Link 5</a>
-            <a href="#">Link 6</a>
-          </div>
-        </div>
+      <li onclick="dropit(3)";>
+        <a href="#">News </a>
+        <img src="images/arrow.svg" alt="">
       </li>
-
-      <li class="navbar-dropdown">
-        <div class="dropdown">
-          <button class="navbtn" type="button" onclick="toggledisplay('dropdown-5')">Shop</button>
-          <div id="dropdown-5" class="dropdown-content">
-            <a href="#">Link 4</a>
-            <a href="#">Link 5</a>
-            <a href="#">Link 6</a>
-          </div>
-        </div>
+      <li onclick="dropit(4)";>
+        <a href="#">Shop </a>
+        <img src="images/arrow.svg" alt="">
       </li>
-
-      <li class="navbar-dropdown">
-        <div class="dropdown">
-          <button class="navbtn" type="button" onclick="toggledisplay('dropdown-6')">Support</button>
-          <div id="dropdown-6" class="dropdown-content">
-            <a href="#">Link 4</a>
-            <a href="#">Link 5</a>
-            <a href="#">Link 6</a>
-          </div>
-        </div>
+      <li onclick="dropit(5)";>
+        <a href="#">Support </a>
+        <img src="images/arrow.svg" alt="">
       </li>
-
-      <li class="navbar-dropdown"><button class="sign-in-btn" type="button" name="button">Sign In</button></li>
-      <form class="" action="/" method="POST">
-        <li class="navbar-dropdown"><input class="search-input" type="text" name="search" placeholder="Search"></li>
-      </form>
-
     </ul>
+    <button class="sign-in-btn" type="button" name="sign-in">Sign In</button>
+    <div class="search">
+      <button class="search-btn">Search<span><i class="fa-solid fa-magnifying-glass"></i></span></button>
+    </div>
+    <!-- Search Block -->
+    <div class="search-box">
+      <div class="search-site">
+        <h2>PlayStation.com</h2>
+        <img src="images/arrow.svg" alt="">
+        <div class="search-site-content">
+          <a href="#">PlayStation.com</a>
+          <a href="#">PlayStation Store</a>
+        </div>
+      </div>
+      <div class="search-input">
+        <input type="text" placeholder="Search PlayStation.com">
+      </div>
+      <div class="search-button">
+        <img src="images\search-icon.png" alt="">
+      </div>
+    </div>
+  </nav>
+  <!-- Games -->
+  <div class="dropdown">
+      <div class="drop-container">
+        <div>
+          <a><img src="images/ps-icon-1.png" alt="icon"></a>
+          <p>PS 5</p>
+        </div>
+        <div>
+          <a><img src="images/ps-icon-2.png" alt="icon"></a>
+          <p>PS 4</p>
+        </div>
+        <div>
+          <a><img src="images/ps-icon-3.png" alt="icon"></a>
+          <p>PS VR2</p>
+        </div>
+        <div>
+          <a><img src="images/ps-icon-4.png" alt="icon"></a>
+          <p>PS Plus</p>
+        </div>
+        <div>
+          <a><img src="images/ps-icon-5.png" alt="icon"></a>
+          <p>Buy Games</p>
+        </div>
+      </div>
+
+      <hr>
+      <div class="drop-games">
+        <li> Playstation Indies</li>
+        <li> PS4 games on PS5</li>
+        <li> Free to Play</li>
+        <li> PlayStation games on PC</li>
+        <li> Deals & offers</li>
+      </div>
+
+  </div>
+  <!-- Hardware -->
+  <div class="dropdown">
+    <div class="drop-container">
+      <div>
+        <a><img src="images/ps-icon-1.png" alt="icon"></a>
+        <p>PS 5</p>
+      </div>
+      <div>
+        <a><img src="images/ps-icon-2.png" alt="icon"></a>
+        <p>PS 4</p>
+      </div>
+      <div>
+        <a><img src="images/ps-icon-3.png" alt="icon"></a>
+        <p>PS VR2</p>
+      </div>
+    </div>
+    <hr>
+    <div class="drop-games">
+      <li> DualSense wireless controller</li>
+      <li> PULSE 3D wireless headset</li>
+      <li> DUALSHOCK 4 wireless controller</li>
+      <li> PS5 & PS4 accessories</li>
+      <li> PlayStation VR</li>
+    </div>
+  </div>
+  <!-- Services -->
+  <div class="dropdown">
+    <div class="drop-container">
+      <div>
+        <a><img src="images\ps-icon-4.png" alt="icon"></a>
+        <p>PS Plus</p>
+      </div>
+      <div>
+        <a><img src="images/ps-icon-6.png" alt="icon"></a>
+        <p>PS Stars</p>
+      </div>
+    </div>
+    <hr>
+    <div class="drop-games">
+      <li> PS5 entertainment</li>
+      <li> PS4 entertainment</li>
+    </div>
+  </div>
+  <!-- News -->
+  <div class="dropdown">
+    <div class="drop-container">
+      <div>
+        <a><img src="images/ps-icon-7.png" alt="icon"></a>
+        <p>PS Blog</p>
+      </div>
+      <div>
+        <a><img src="images/ps-icon-8.png" alt="icon"></a>
+        <p>This Month on PlayStation</p>
+      </div>
+    </div>
+    <hr>
+    <div class="drop-games">
+      <li> Competition Center</li>
+      <li> Accessibility</li>
+      <li> Privacy & Safety</li>
+    </div>
+  </div>
+  <!-- Shop -->
+  <div class="dropdown">
+    <div class="drop-container">
+      <div>
+        <a><img src="images/ps-icon-2.png" alt="icon"></a>
+        <p>Hardware and Discs</p>
+      </div>
+      <div>
+        <a><img src="images/ps-icon-5.png" alt="icon"></a>
+        <p>Digital Games and Services</p>
+      </div>
+      <div>
+        <a><img src="images/ps-icon-9.png" alt="icon"></a>
+        <p>PS Gear</p>
+      </div>
+    </div>
+    <hr>
+    <div class="drop-games">
+      <li> Buy a PS5</li>
+      <li> New releases</li>
+      <li> Latest discounts</li>
+      <li> Buy gift card</li>
+      <li> Subscribe to PS Plus</li>
+    </div>
+  </div>
+  <!-- Support -->
+  <div class="dropdown">
+    <div class="drop-container">
+      <div>
+        <a><img src="images/ps-icon-10.png" alt="icon"></a>
+        <p>Support</p>
+      </div>
+      <div>
+        <a><img src="images\favicon.png" alt="icon"></a>
+        <p>PSN Status</p>
+      </div>
+    </div>
+    <hr>
+    <div class="drop-games">
+      <li> Account</li>
+      <li> Store</li>
+      <li> Subscriptions</li>
+      <li> Games</li>
+      <li> Hardware</li>
+    </div>
   </div>
 
   <!-- Slideshow -->
-
   <div class="slideshow-container">
-
+<!-- Make images not look like ass. Stop top being cut off !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! -->
     <div class="mySlides fade">
-      <img src="images/destiny_2_lightfall.jpg">
+      <div class="slide-popup ">
+        <img class="float-in-img" src="images\destiny_lightfall_logo.webp" alt="">
+        <h2 class="float-in-text">Lightfall is the perfect time to return to Destiny 2</h2>
+        <p class="float-in-text">This bold new expansion further refines the Destiny 2 experience, bringing with it a host of exciting features that make Lightfall the perfect place to get back into the ever-evolving action MMO.</p>
+        <button class="btn float-in-text" type="button" name="find-out-more">Find out more</button>
+      </div>
+      <img class="last-img" src="images\apex_legends.jpg">
     </div>
 
     <div class="mySlides fade">
+      <div class="slide-popup ">
+        <img class="float-in-img" src="images\destiny_lightfall_logo.webp" alt="">
+        <h2 class="float-in-text">Lightfall is the perfect time to return to Destiny 2</h2>
+        <p class="float-in-text">This bold new expansion further refines the Destiny 2 experience, bringing with it a host of exciting features that make Lightfall the perfect place to get back into the ever-evolving action MMO.</p>
+        <button class="btn float-in-text" type="button" name="find-out-more">Find out more</button>
+      </div>
       <img src="images/hogwarts_legacy.jpeg">
     </div>
 
     <div class="mySlides fade">
-      <img src="images/gta_5.jpeg">
+      <div class="slide-popup">
+        <img class="float-in-img" src="images\destiny_lightfall_logo.webp" alt="">
+        <h2 class="float-in-text">Lightfall is the perfect time to return to Destiny 2</h2>
+        <p class="float-in-text">This bold new expansion further refines the Destiny 2 experience, bringing with it a host of exciting features that make Lightfall the perfect place to get back into the ever-evolving action MMO.</p>
+        <button class="btn float-in-text" type="button" name="find-out-more">Find out more</button>
+      </div>
+      <img src="images\star_wars2.jpg">
     </div>
 
     <div class="mySlides fade">
+      <div class="slide-popup ">
+        <img class="float-in-img" src="images\destiny_lightfall_logo.webp" alt="">
+        <h2 class="float-in-text">Lightfall is the perfect time to return to Destiny 2</h2>
+        <p class="float-in-text">This bold new expansion further refines the Destiny 2 experience, bringing with it a host of exciting features that make Lightfall the perfect place to get back into the ever-evolving action MMO.</p>
+        <button class="btn float-in-text" type="button" name="find-out-more">Find out more</button>
+      </div>
       <img src="images/fifa_23.jpg">
     </div>
 
     <div class="slideshow-indicator">
-      <img class="indicator-img" src="images/destiny_2_lightfall.jpg" onclick="clickedDiv(0)" onmouseover="hoveredDiv(0)" onmouseout="dehoveredDiv()">
+      <img class="indicator-img" src="images\apex_legends1.jpg" onclick="clickedDiv(0)" onmouseover="hoveredDiv(0)" onmouseout="dehoveredDiv()">
       <img class="indicator-img" src="images/hogwarts_legacy.jpeg" onclick="clickedDiv(1)" onmouseover="hoveredDiv(1)" onmouseout="dehoveredDiv()">
-      <img class="indicator-img" src="images/gta_5.jpeg" onclick="clickedDiv(2)" onmouseover="hoveredDiv(2)" onmouseout="dehoveredDiv()">
+      <img class="indicator-img" src="images\star_wars.jpg" onclick="clickedDiv(2)" onmouseover="hoveredDiv(2)" onmouseout="dehoveredDiv()">
       <img class="indicator-img" src="images/fifa_23.jpg" onclick="clickedDiv(3)" onmouseover="hoveredDiv(3)" onmouseout="dehoveredDiv()">
     </div>
   </div>
@@ -173,7 +288,7 @@
       <button class="btn carousel-btn" type="button" name="buy-now">Buy now</button>
     </div>
     <div class="img-box">
-      <img class="carousel-img" src="images/playstation_5.jpg" alt="playstation 5 image">
+      <img class="carousel-img fade-carousel-img" src="images/playstation_5.jpg" alt="playstation 5 image">
     </div>
   </div>
 
@@ -185,7 +300,7 @@
       <button class="btn carousel-btn" type="button" name="buy-now">Buy now</button>
     </div>
     <div class="img-box">
-      <img class="carousel-img" src="images/dualsense_controller.jpg" alt="playstation 5 image">
+      <img class="carousel-img fade-carousel-img" src="images/dualsense_controller.jpg" alt="playstation 5 image">
     </div>
   </div>
 
@@ -197,7 +312,7 @@
       <button class="btn carousel-btn" type="button" name="buy-now">Buy now</button>
     </div>
     <div class="img-box">
-      <img class="carousel-img" src="images/pulse_headset.jpg" alt="playstation 5 image">
+      <img class="carousel-img fade-carousel-img" src="images/pulse_headset.jpg" alt="playstation 5 image">
     </div>
   </div>
 
@@ -209,7 +324,7 @@
       <button class="btn carousel-btn" type="button" name="buy-now">Buy now</button>
     </div>
     <div class="img-box">
-      <img class="carousel-img" src="images/dualsense_edge.jpg" alt="playstation 5 image">
+      <img class="carousel-img fade-carousel-img" src="images/dualsense_edge.jpg" alt="playstation 5 image">
     </div>
   </div>
 
@@ -221,7 +336,7 @@
       <button class="btn carousel-btn" type="button" name="buy-now">Buy now</button>
     </div>
     <div class="img-box">
-      <img class="carousel-img" src="images/media_remote.jpeg" alt="playstation 5 image">
+      <img class="carousel-img fade-carousel-img" src="images/media_remote.jpeg" alt="playstation 5 image">
     </div>
   </div>
 
@@ -233,7 +348,7 @@
       <button class="btn carousel-btn" type="button" name="buy-now">Buy now</button>
     </div>
     <div class="img-box">
-      <img class="carousel-img" src="images/hd_camera.jpg" alt="playstation 5 image">
+      <img class="carousel-img fade-carousel-img" src="images/hd_camera.jpg" alt="playstation 5 image">
     </div>
   </div>
 
@@ -245,7 +360,7 @@
       <button class="btn carousel-btn" type="button" name="buy-now">Buy now</button>
     </div>
     <div class="img-box">
-      <img class="carousel-img" src="images/console_covers.jpg" alt="playstation 5 image">
+      <img class="carousel-img fade-carousel-img" src="images/console_covers.jpg" alt="playstation 5 image">
     </div>
   </div>
 
@@ -529,7 +644,7 @@
   </div>
 </section>
 
-<section id="legal">
+<section id="footer">
   <div class="container">
     <div class="title">
       <img class="logo" src="images\playstation_logo.png">
@@ -629,13 +744,6 @@ All rights reserved. <span><a href="#">More info</a></span></p>
     </div>
   </div>
 </section>
-
-
-
-<!-- <h1>Hallo!</h1>
-<h1>Hallo!</h1>
-<h1>Hallo!</h1>
-<h1>Hallo!</h1> -->
 
   <script src="index.js" type="text/javascript">
 
