@@ -7,9 +7,7 @@ body {
   overflow: auto;
   z-index: -10;
 }
-/* body *> :not(.search-box) {
-  opacity: 0.3;
-} */
+
 a {
   text-decoration: none;
   color: inherit;
@@ -18,6 +16,7 @@ a {
 p {
   margin: 0;
   padding: 0;
+  font-family: 'Montserrat', sans-serif;
 }
 
 form {
@@ -29,10 +28,10 @@ form {
 /* Google Icons style */
 .material-symbols-outlined {
   font-variation-settings:
-  'FILL' 0,
-  'wght' 400,
-  'GRAD' 0,
-  'opsz' 48
+    'FILL' 0,
+    'wght' 400,
+    'GRAD' 0,
+    'opsz' 48
 }
 
 /* Document wide classes */
@@ -46,12 +45,15 @@ form {
   color: white;
   transition: outline 0.05s;
 }
+
 .btn:hover {
   outline: 2px solid #0070cc;
   outline-offset: 2px;
 }
+
 .btn[name="buy-now"]:hover {
-  outline: 2px solid #d53b00;;
+  outline: 2px solid #d53b00;
+  ;
 }
 
 ::placeholder {
@@ -91,6 +93,7 @@ nav {
   z-index: 3;
   top: 0;
 }
+
 .logo {
   transition: all 0.7s;
   font-size: 1rem;
@@ -98,14 +101,17 @@ nav {
   width: 3vw;
   text-align: center;
 }
+
 .logo img {
   width: 3vw;
   transition: all 0.5s ease;
 }
+
 .logo-active img {
   transform: translateY(-7px);
   width: 2vw;
 }
+
 .nav-links {
   display: flex;
   justify-content: space-around;
@@ -113,29 +119,35 @@ nav {
   font-size: 1rem;
   padding-left: 0;
 }
+
 .nav-links li {
   list-style: none;
   transition: all 0.5s;
 }
+
 .nav-links a:hover {
   color: #0070cc;
 }
+
 .nav-links-active {
   transform: translateY(-7px);
   font-size: 0.9rem;
 }
+
 .nav-links a {
   color: black;
   text-decoration: none;
 }
+
 .nav-links img {
   width: 10px;
-  /* filter: invert(1); */
   transition: all 0.1s;
 }
+
 .arrow-active {
   transform: rotate(180deg);
 }
+
 .dropdown {
   z-index: 2;
   position: absolute;
@@ -149,11 +161,13 @@ nav {
   transition: all 0.2s ease-in;
   box-shadow: 0px 0px 20px black;
 }
+
 .dropdown-active {
   transform: translateY(0);
   opacity: 1;
   transition: all 0.6s ease-out;
 }
+
 .dropdown hr {
   margin-top: 0rem;
   height: 1px;
@@ -161,24 +175,13 @@ nav {
   border: none;
 }
 
-/* For mobile screens */
-@media screen and (max-width: 768px) {
-  body {
-    display: none;
-  }
-}
-
-@media screen and (max-width: 1024px) {
-  .nav-links {
-    width: 70%;
-  }
-}
 .drop-container {
   display: flex;
   justify-content: center;
   gap: 0.5vw;
   margin-top: 10px;
 }
+
 .drop-container div {
   width: 11vw;
   height: 8vw;
@@ -189,16 +192,20 @@ nav {
   margin: 10px;
   border-radius: 3px;
 }
+
 .drop-container div:hover {
   box-shadow: 0px 0px 5px grey;
 }
+
 .drop-container img {
   width: 3vw;
 }
+
 .drop-container p {
   margin-bottom: 0;
   text-align: center;
 }
+
 .drop-games {
   display: flex;
   justify-content: center;
@@ -206,18 +213,21 @@ nav {
   gap: 3vw;
   height: 3rem;
   list-style: none;
+  font-family: 'Montserrat', sans-serif;
 }
+
 .drop-games li:hover {
   cursor: pointer;
   color: #0070cc;
 }
+
 .drop-games li::before {
   background-image: url('../images/list_icon.png');
   background-size: 8px 8px;
   display: inline-block;
   width: 8px;
   height: 8px;
-  content:" ";
+  content: " ";
 }
 
 .sign-in-btn {
@@ -238,18 +248,21 @@ nav {
 .sign-in-btn:hover {
   background-color: #1b54c4;
 }
+
 .search {
   position: absolute;
   left: 90vw;
   transition: all 0.5s
 }
+
 .search-active {
   transform: translateY(-10px) scale(0.9);
   transition: all 0.5s
 }
+
 .search button {
   position: relative;
-  left: 0;
+  right: 0vw;
   height: 40px;
   width: 140px;
   border: 1px solid #c8c8cc;
@@ -258,13 +271,16 @@ nav {
   text-align: left;
   /* color: grey; */
 }
+
 .search button:hover {
   border: 1px solid black;
 }
+
 .search i {
   position: relative;
   left: 50px;
 }
+
 .search-box {
   display: none;
   width: 39vw;
@@ -276,6 +292,7 @@ nav {
   box-shadow: 0 5px 5px black;
   flex-direction: row;
 }
+
 .search-site {
   width: 30%;
   height: 100%;
@@ -283,6 +300,7 @@ nav {
   position: relative;
   border-right: 1px solid #ccc;
 }
+
 .search-site h2 {
   width: 80%;
   font-size: 1.3rem;
@@ -291,25 +309,29 @@ nav {
   top: 8px;
   left: 10px;
 }
+
 .search-site h2:hover {
   color: #0172CE;
 }
+
 .search-site img {
   width: 10px;
-  /* filter: invert(); */
   position: absolute;
   right: 10px;
   top: 50%;
 }
+
 .search-site:hover .search-site-content {
   display: block;
 }
+
 .search-site-content {
   display: none;
   width: 100%;
   background-color: white;
   transform: translateY(4.3rem)
 }
+
 .search-site-content a {
   width: 100%;
   height: 4.3rem;
@@ -319,18 +341,22 @@ nav {
   color: black;
   font-size: 1.1rem;
 }
+
 .search-site-content a:first-child {
   background-color: #0172CE;
   box-shadow: 0 0 4px 1px white inset;
   color: white;
 }
+
 .search-site-content a:last-child:hover {
   color: #0172CE;
 }
+
 .search-input {
   width: 60%;
   height: 100%;
 }
+
 .search-input input, input::placeholder {
   width: 100%;
   height: 100%;
@@ -342,9 +368,11 @@ nav {
   font-weight: 300;
   background-color: #f0ebeb;
 }
+
 .search-input input:focus {
   outline: 0;
 }
+
 .search-button {
   width: 10%;
   height: 100%;
@@ -353,18 +381,22 @@ nav {
   justify-content: center;
   align-items: center;
 }
+
 .search-button:focus {
   color: red;
 }
+
 .search-button img {
   width: 40%;
   filter: invert(1);
 }
+
 .slideshow-container {
   position: relative;
   margin: auto;
   background-color: #00163b;
 }
+
 /* SlideShow */
 /* Hide slideshow images by default */
 .mySlides {
@@ -372,6 +404,7 @@ nav {
   display: none;
   height: 70vh;
 }
+
 .slide-popup {
   position: absolute;
   display: flex;
@@ -383,21 +416,25 @@ nav {
   justify-content: center;
   align-items: center;
 }
+
 .mySlides .slide-popup img {
-  height: 100px;
-  width: 300px;
+  height: 5vw;
+  width: 10vw;
   overflow: visible;
   z-index: 1;
 }
+
 .mySlides .slide-popup h2 {
   font-size: 2rem;
   font-weight: 300;
 }
+
 .mySlides .slide-popup p {
   font-size: 1rem;
-  line-height: 1.3rem;
-  font-weight: 400;
+  line-height: 1.4rem;
+  font-family: 'Montserrat', sans-serif;
 }
+
 .mySlides .slide-popup button {
   height: 2.5rem;
   width: 9rem;
@@ -406,38 +443,61 @@ nav {
   background-color: white;
   font-size: 1rem;
 }
+
 .mySlides .slide-popup button:hover {
   outline-color: white;
 }
+
 .mySlides img {
   width: 100%;
   height: 70vh;
   object-fit: cover;
 }
+
 .float-in-img {
   animation-name: float-img;
   animation-duration: 1s;
 }
+
 .float-in-text {
   animation-name: float-text;
   animation-duration: 1.3s;
 }
+
 .fade {
   animation-name: fade;
   animation-duration: 4s;
 }
+
 /* Add smooth transition with fade to black */
 @keyframes fade {
-  from {opacity: 0}
-  to { opacity: 1}
+  from {
+    opacity: 0
+  }
+
+  to {
+    opacity: 1
+  }
 }
+
 @keyframes float-img {
-  from {transform: translateY(20px)}
-  to {transform: translateY(0px)}
+  from {
+    transform: translateY(20px)
+  }
+
+  to {
+    transform: translateY(0px)
+  }
 }
+
 @keyframes float-text {
-  from {transform: translateY(20px)}
-  to {transform: translateY(0px)}
+  from {
+    transform: translateY(20px)
+  }
+
+  to {
+    transform: translateY(0px)
+  }
 }
 
 .slideshow-indicator {
@@ -475,19 +535,19 @@ nav {
 .carousel-container {
   display: none;
   /* opacity: 1; */
-  grid-template-columns: 700px 700px;
+  grid-template-columns: 40vw 40vw;
   grid-template-rows: auto;
   align-content: center;
   align-items: center;
   justify-content: center;
   justify-items: center;
-  height: 40rem;
+  height: 80vh;
   overflow: hidden;
   /* transition: opacity 2s; */
 }
 
 .title-box {
-  width: 500px;
+  width: 30vw;
 }
 
 .img-box {
@@ -503,16 +563,18 @@ nav {
   font-size: 1.3rem;
   font-weight: lighter;
 }
-/* Transition Not working !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! */
+
 .carousel-img {
   width: 100%;
   opacity: 1;
   transition: all 3s;
 }
+
 .fade-carousel-img {
   animation-name: fade;
   animation-duration: 0.5s;
 }
+
 button[name="learn-more"] {
   padding: 0.7rem;
   font-size: 1rem;
@@ -534,13 +596,13 @@ button[name="buy-now"] {
   gap: 5px;
 }
 
-#carousel-indicator div  {
+#carousel-indicator div {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  height: 10rem;
-  width: 10rem;
+  height: 10vw;
+  width: 10vw;
   transition: opacity 0.2s, outline-width 0.2s;
   border-radius: 10px;
 }
@@ -550,8 +612,7 @@ button[name="buy-now"] {
   transition: opacity 0.3s;
 }
 
-
-#carousel-indicator div:hover *{
+#carousel-indicator div:hover * {
   opacity: 1;
 }
 
@@ -570,8 +631,9 @@ button[name="buy-now"] {
   width: 100%;
   height: 27.5rem;
   margin-top: 2rem;
-  background-image: url("../images/playstation_plus_background1.jpg");\
-  background-repeat: no-repeat;
+  background-image: url("../images/playstation_plus_background1.jpg");
+  \
+ background-repeat: no-repeat;
   background-size: 1800px;
   display: grid;
   grid-template-columns: 30% 50%;
@@ -609,7 +671,7 @@ button[name="buy-now"] {
 .plus-info p {
   grid-column: 1 / 3;
   grid-row: 2 / 3;
-  font-weight: lighter;
+  font-weight: 400;
 }
 
 .plus-info button {
@@ -631,6 +693,7 @@ button[name="buy-now"] {
   align-content: center;
   gap: 7px;
 }
+
 #meet-your-maker-img {
   grid-row: 1 / 3;
   display: block;
@@ -649,12 +712,14 @@ button[name="buy-now"] {
   max-width: 100%;
   height: auto;
 }
+
 /* Game-Grid Carousel styles */
 #game-grid {
   background-color: #121314;
   overflow: hidden;
   position: relative;
 }
+
 .game-grid_container {
   width: 80vw;
   height: 40vw;
@@ -662,22 +727,24 @@ button[name="buy-now"] {
   padding-top: 3rem;
   /* outline: 5px solid black; */
   overflow: hidden;
-  clip-path: inset( -10vw -10vw -10vw 0 );
+  clip-path: inset(-10vw -10vw -10vw 0);
 }
+
 .game-grid_slide {
   display: flex;
   position: absolute;
 }
+
 .game-grid_box {
   width: 77vw;
   height: 45vw;
-  /* opacity: 0.5; */
-
 }
+
 .game-grid_title {
   grid-column: 1 / 7;
   justify-self: start;
 }
+
 .game-grid_box h2 {
   line-height: 1rem;
   margin: 0;
@@ -685,12 +752,14 @@ button[name="buy-now"] {
   color: white;
   font-weight: light;
 }
+
 .game-grid_title h3 {
   font-weight: 300;
   margin: 0;
   color: white;
   font-size: 1.3rem;
 }
+
 .game-grid_box-grid {
   display: grid;
   justify-content: center;
@@ -700,11 +769,13 @@ button[name="buy-now"] {
   grid-auto-rows: 5vw 15vw 15vw;
   grid-column-gap: 2vw;
 }
+
 .game-grid_item {
   width: 11vw;
   height: 13vw;
   margin: auto;
 }
+
 .game-grid_item img {
   max-width: 100%;
   aspect-ratio: 1/1;
@@ -713,10 +784,12 @@ button[name="buy-now"] {
   transition: all 0.2s;
   box-shadow: 0 3px 10px black;
 }
+
 .game-grid_item img:hover {
   transform: scale(1.02);
   box-shadow: 0 8px 10px black;
 }
+
 .game-grid_item h3 {
   margin: 0;
   color: white;
@@ -724,12 +797,15 @@ button[name="buy-now"] {
   font-size: 1rem;
   margin-left: 0.5rem;
   margin-top: 0.5rem;
+  font-family: 'Montserrat', sans-serif;
 }
+
 .game-grid_container a {
   display: block;
   width: 100%;
   line-height: 100%;
 }
+
 /* Game-Grid Carousel Buttons */
 .game-grid_container button {
   position: absolute;
@@ -742,16 +818,20 @@ button[name="buy-now"] {
   outline: 0;
   transition: outline 0.1s;
 }
+
 .game-grid_container button:hover {
   outline: 2px solid white;
   outline-offset: 3px;
 }
+
 #prevBtn {
   right: 20rem;
 }
+
 #nextBtn {
   right: 16rem;
 }
+
 #social-media .container {
   width: 100%;
   height: 24vw;
@@ -763,59 +843,72 @@ button[name="buy-now"] {
   justify-content: center;
   grid-row-gap: 4rem;
 }
+
 #social-media .container .title {
   grid-column: 1 / 2;
   text-align: center;
 }
+
 #social-media .container .title h1 {
   font-size: 2rem;
   font-weight: 80;
   margin: 0;
 }
+
 #social-media .container .items {
   display: flex;
   grid-column: 1 / 2;
   justify-content: center;
   gap: 3rem;
 }
+
 #social-media .container img {
   height: 6vw;
   opacity: 0.8;
   transition: transform 0.3s;
 }
+
 #social-media .container img:hover {
   transform: scale(1.03);
 }
+
 #footer .container {
   max-width: 100%;
-  height: 37rem;
+  height: 35vw;
   background-color: #00439C;
   padding: 1vw 5vw 0 5vw;
 }
+
 #footer .container * {
   color: white;
 }
+
 #footer .container hr {
   border: 0;
   border-bottom: 1px solid white;
   opacity: 0.3;
 }
+
 #footer .title .logo {
   max-width: 4vw;
   margin-right: 1vw;
 }
+
 #footer .title .text {
   filter: brightness(0) invert(1);
   max-width: 13vw;
 }
+
 #footer .link-container {
   display: grid;
   grid-template-columns: repeat(6, auto);
   grid-template-rows: 17vw;
 }
+
 #footer .link-container .categories li:first-child {
   font-weight: bolder;
 }
+
 #footer .link-container li {
   font-weight: 300;
   list-style: none;
@@ -823,17 +916,21 @@ button[name="buy-now"] {
   line-height: 1.7rem;
   cursor: pointer;
 }
+
 #footer .link-container li:hover:not(:first-child) {
   color: #ababab
 }
+
 #footer .link-container img {
   width: 1.5vw;
   filter: invert(1);
   padding-right: 1vw;
 }
+
 #footer .link-container img:hover {
   opacity: 0.7;
 }
+
 #footer .interactive .sony-interactive {
   width: 20vw;
   height: 7vw;
@@ -841,6 +938,7 @@ button[name="buy-now"] {
   display: flex;
   align-items: center;
 }
+
 #footer .interactive h3 {
   display: inline;
   word-spacing: 100vw;
@@ -848,42 +946,111 @@ button[name="buy-now"] {
   font-weight: normal;
   margin-left: 1vw;
 }
+
 #footer .interactive img {
   float: left;
   width: 6vw;
 }
+
 #footer .interactive p {
   font-weight: 350;
   font-size: 0.9rem;
 }
+
 #footer .interactive a {
   text-decoration: underline;
 }
+
 #footer .interactive a:hover {
   color: #ababab;
 }
+
 #footer .policy {
   display: flex;
   justify-content: space-between;
   font-size: 0.9rem;
 }
+
 #footer .policy .country {
   display: flex;
   align-items: center;
   gap: 1vw;
 }
+
 #footer .policy .country:hover {
   color: #ababab;
   cursor: pointer;
 }
+
 #footer .policy img {
   width: 1.5vw;
   filter: invert(1);
 }
+
 #footer .policy p:hover {
   color: #ababab;
   cursor: pointer;
 }
+
 #footer .policy .utility {
   display: flex;
+}
+
+/* Media Queries */
+@media screen and (max-width: 1024px) {
+  .nav-links {
+    width: 70%;
+  }
+
+  .search {
+    left: 85vw;
+  }
+
+  .sign-in-btn {
+    left: 77vw;
+  }
+
+  .search-box {
+    width: 61vw;
+  }
+
+  .carousel-container {
+    height: 69vh;
+  }
+
+  #carousel-indicator p {
+    font-size: 1rem;
+  }
+
+  .plus-info h1 {
+    font-size: 1.5rem;
+  }
+
+  .plus-info button {
+    width: 70%;
+  }
+
+  .game-grid_box-grid {
+    grid-row-gap: 1vw;
+  }
+
+  .game-grid_item h3 {
+    font-size: 0.9rem;
+  }
+
+  .game-grid_container {
+    height: 45vw;
+  }
+
+  #footer .container {
+    height: 55vw;
+  }
+
+  #footer .link-container {
+    grid-template-rows: 30vw;
+  }
+
+  .dropdown {
+    height: 11rem;
+  }
 }
